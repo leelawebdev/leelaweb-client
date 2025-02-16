@@ -17,7 +17,7 @@ jobs:
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /var/www/leelaweb/client
+            cd /var/www/leelaweb-client
             git pull origin main
             npm install
             npm run build
