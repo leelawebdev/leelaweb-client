@@ -1,4 +1,4 @@
-name: Deploy Backend
+name: Deploy Frontend
 
 on:
   push:
@@ -17,7 +17,8 @@ jobs:
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /var/www/leelaweb-api
+            cd /var/www/leelaweb/client
             git pull origin main
             npm install
-            pm2 restart leelaweb-api
+            npm run build
+            pm2 restart leelaweb-client
