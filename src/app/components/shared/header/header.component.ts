@@ -7,10 +7,6 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  isCollapsed = true;
 
-  toggleNavbar() {
-    this.isCollapsed = !this.isCollapsed;
-  }
 
 }
