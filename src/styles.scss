@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files 081b28 0f2b3e 004b64 */
 body {
   background-color: #081b28;
+  font-family: leelWebFontRegular;
+}
+@font-face {
+  font-family: leelWebFontRegular;
+  src: url(assets/fonts/Nunito-Regular.ttf);
 }
 h1,
 h2,
