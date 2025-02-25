@@ -1,8 +1,8 @@
 <div class="row py-5 mx-0">
   <div class="col-lg-4 mx-auto">
-    <div class="card p-5">
+    <div class="card p-5 bg-card">
       <div class="card-title">
-        <h3 class="text-dark text-center">Rigister your account</h3>
+        <h3 class="text-light text-center">Register your account</h3>
         <form action="" class="py-4">
           <div class="form-floating pt-3">
             <input
@@ -53,22 +53,27 @@
             />
             <label for="floatingInput">Confirm Password</label>
           </div>
-          <div class="text-center py-3">
+          <div class="text-center py-3 text-light">
             <input type="checkbox" />
             I agree all statements in
-            <a href="#" class="text-decoration-none">Terms of service</a>
+            <a href="#" class="text-decoration-none text-warning"
+              >Terms of service</a
+            >
           </div>
 
           <div class="text-center py-3">
             <button class="btn btn-block btn-warning w-100">Register</button>
           </div>
 
-          <div class="text-center py-3">
+          <div class="text-center py-3 text-light">
             Have already an account?
-            <a href="#" class="text-decoration-none">Login here</a>
+            <a routerLink="/login" class="text-decoration-none text-warning"
+              >Login here</a
+            >
           </div>
         </form>
       </div>
     </div>
   </div>
 </div>
+<router-outlet />
