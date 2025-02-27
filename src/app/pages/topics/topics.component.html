@@ -1,15 +1,112 @@
 <div class="row py-3 px-5">
-  <h1 class="py-4">This is the Topics Page</h1>
-  <div class="col-lg-3">
-    <app-card-details />
+  <h1 class="py-4">Explore by topics</h1>
+  <div class="col-lg-6">
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur aliquid
+      dolor natus quibusdam voluptatum, nam maxime quam. Ipsa earum
+      reprehenderit facilis animi doloremque, ab excepturi! Maxime recusandae
+      consequuntur iure repudiandae?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur aliquid
+      dolor natus quibusdam voluptatum, nam maxime quam. Ipsa earum
+      reprehenderit facilis animi doloremque, ab excepturi! Maxime recusandae
+      consequuntur iure repudiandae?
+    </p>
   </div>
-  <div class="col-lg-3">
-    <app-card-details />
-  </div>
-  <div class="col-lg-3">
-    <app-card-details />
-  </div>
-  <div class="col-lg-3">
-    <app-card-details />
+</div>
+<div class="row py-2 px-5 mx-0">
+  <div class="col-lg-12">
+    <!-- Tab Navigation -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [class.active]="activeTab === 'all'"
+          (click)="setActiveTab('all')"
+          >All Topics</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [class.active]="activeTab === 'devops'"
+          (click)="setActiveTab('devops')"
+          >Devops</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [class.active]="activeTab === 'framworks'"
+          (click)="setActiveTab('framworks')"
+          >Framworks</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [class.active]="activeTab === 'languages'"
+          (click)="setActiveTab('languages')"
+          >Languages</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [class.active]="activeTab === 'techniques'"
+          (click)="setActiveTab('techniques')"
+          >Techniques</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [class.active]="activeTab === 'testing'"
+          (click)="setActiveTab('testing')"
+          >Testing</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [class.active]="activeTab === 'tooling'"
+          (click)="setActiveTab('tooling')"
+          >Tooling</a
+        >
+      </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content mt-3">
+      <div class="tab-pane fade show active" *ngIf="activeTab === 'all'">
+        <h4>Home</h4>
+        <p>Content for Home Tab</p>
+      </div>
+      <div class="tab-pane fade show" *ngIf="activeTab === 'devops'">
+        <h4>devops</h4>
+        <p>Content for devops Tab</p>
+      </div>
+      <div class="tab-pane fade show" *ngIf="activeTab === 'framworks'">
+        <h4>Framworks</h4>
+        <p>Content for Framworks Tab</p>
+      </div>
+      <div class="tab-pane fade show" *ngIf="activeTab === 'languages'">
+        <h4>Languages</h4>
+        <p>Content for Languages Tab</p>
+      </div>
+      <div class="tab-pane fade show" *ngIf="activeTab === 'techniques'">
+        <h4>Techniques</h4>
+        <p>Content for Techniques Tab</p>
+      </div>
+      <div class="tab-pane fade show" *ngIf="activeTab === 'testing'">
+        <h4>Testing</h4>
+        <p>Content for Testing Tab</p>
+      </div>
+      <div class="tab-pane fade show" *ngIf="activeTab === 'tooling'">
+        <h4>Tooling</h4>
+        <p>Content for Tooling Tab</p>
+      </div>
+    </div>
   </div>
 </div>
