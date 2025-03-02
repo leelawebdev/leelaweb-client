@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-//import { CardDetailsComponent } from '../../components/shared/card-details/card-details.component';
+import { CardDetailsComponent } from '../../components/shared/card-details/card-details.component';
 import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-topics',
-  imports: [NgIf],
+  imports: [NgIf, CardDetailsComponent],
   templateUrl: './topics.component.html',
   styleUrl: './topics.component.scss'
 })

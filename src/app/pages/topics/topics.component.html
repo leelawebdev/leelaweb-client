@@ -59,14 +59,7 @@
           >Techniques</a
         >
       </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          [class.active]="activeTab === 'testing'"
-          (click)="setActiveTab('testing')"
-          >Testing</a
-        >
-      </li>
+
       <li class="nav-item">
         <a
           class="nav-link"
@@ -83,30 +76,536 @@
         <h4>Home</h4>
         <p>Content for Home Tab</p>
       </div>
-      <div class="tab-pane fade show" *ngIf="activeTab === 'devops'">
-        <h4>devops</h4>
-        <p>Content for devops Tab</p>
+      <!-- Start Devops Section -->
+      <div class="d-flex justify-content-start align-items-start">
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'devops'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">aws</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'devops'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">Servers</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'devops'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">Laravel</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'devops'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">Envoyer</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="tab-pane fade show" *ngIf="activeTab === 'framworks'">
-        <h4>Framworks</h4>
-        <p>Content for Framworks Tab</p>
+      <!-- End Devops Section -->
+      <!-- Start Framwork Section -->
+      <div class="d-flex justify-content-start align-items-start">
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'framworks'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">Angular</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'framworks'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">React Js</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'framworks'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">VueJs</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'framworks'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">Nuxt</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="tab-pane fade show" *ngIf="activeTab === 'languages'">
-        <h4>Languages</h4>
-        <p>Content for Languages Tab</p>
+      <!-- End Framworks Section -->
+
+      <!-- Start Language Section -->
+      <div class="d-flex justify-content-start align-items-start">
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'languages'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">CSS</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'languages'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">HTML</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'languages'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">JavaScript</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'languages'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">PHP</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'languages'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">TypeScript</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="tab-pane fade show" *ngIf="activeTab === 'techniques'">
-        <h4>Techniques</h4>
-        <p>Content for Techniques Tab</p>
+      <!-- End Language Section -->
+      <!-- Start Techniques Section -->
+      <div class="d-flex justify-content-start align-items-start flex-wrap">
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'techniques'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">Authentication</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'techniques'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">Autherization</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'techniques'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">Clean Code</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'techniques'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">CLI</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'techniques'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">APIs</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'techniques'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">OOPs</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="tab-pane fade show" *ngIf="activeTab === 'testing'">
-        <h4>Testing</h4>
-        <p>Content for Testing Tab</p>
+      <!-- End Techniques Section -->
+
+      <!-- Start Tooling Section -->
+      <div class="d-flex justify-content-start align-items-start">
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'tooling'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">Visual Studio Code</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'tooling'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">Docker</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'tooling'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">Webpack</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show col-lg-2 tabs-bg"
+          *ngIf="activeTab === 'tooling'"
+        >
+          <div class="d-flex align-items-center">
+            <div class="p-3 text-primary">
+              <img
+                src="images/icons/visual-studio-code.svg"
+                width="50"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="title mb-2">MySQL</p>
+              <div class="d-flex justify-content-between">
+                <p>1 Series</p>
+                <p>10 Videos</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="tab-pane fade show" *ngIf="activeTab === 'tooling'">
-        <h4>Tooling</h4>
-        <p>Content for Tooling Tab</p>
-      </div>
+      <!-- End Tooling Section -->
     </div>
+  </div>
+</div>
+
+<div class="row py-3 px-5">
+  <h1 class="py-4">Exploring Laravel Livewire</h1>
+  <div class="col-lg-3 pt-3">
+    <app-card-details />
+  </div>
+  <div class="col-lg-3 pt-3">
+    <app-card-details />
+  </div>
+  <div class="col-lg-3 pt-3">
+    <app-card-details />
+  </div>
+  <div class="col-lg-3 pt-3">
+    <app-card-details />
+  </div>
+  <div class="col-lg-3 pt-3">
+    <app-card-details />
+  </div>
+  <div class="col-lg-3 pt-3">
+    <app-card-details />
+  </div>
+  <div class="col-lg-3 pt-3">
+    <app-card-details />
   </div>
 </div>
