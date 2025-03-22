@@ -11,7 +11,6 @@ import { AdminChaptersFormComponent } from './components/admin-chapters-form/adm
 
 export const adminRoutes: Route[] = [
   { path: '', component: AdminDashboardComponent, children:[
-    {path: 'admin', component: AdminDashboardComponent},
     {path: 'categories', component: AdminCategoriesComponent},
     {path: 'series', component: SeriesComponent},
     {path: 'topics', component: AdminTopicsComponent},

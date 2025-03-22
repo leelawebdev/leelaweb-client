@@ -8,5 +8,9 @@ import { AdminSeriesFormComponent } from '../../admin-series-form/admin-series-f
   styleUrl: './series.component.scss'
 })
 export class SeriesComponent {
+  showTable = true;
 
+  onSeriesDetailsAddClick(event: Event){
+    this.showTable = !this.showTable;
+  }
 }

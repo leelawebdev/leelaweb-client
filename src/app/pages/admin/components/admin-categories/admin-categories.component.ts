@@ -8,5 +8,10 @@ import { AdminCategoriesFormComponent } from "../admin-categories-form/admin-cat
   styleUrl: './admin-categories.component.scss'
 })
 export class AdminCategoriesComponent {
+  showTable = true;
+  onCategoryDetailsAddClick(event: Event){
+    this.showTable = !this.showTable;
+  }
+
 
 }
