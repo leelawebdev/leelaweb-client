@@ -1,10 +1,16 @@
-<div class="row mx-0">
+<div class="row mx-0 mt-5">
   <div class="col-lg-10 d-flex justify-content-between mb-3">
     <h1 class="text-info">Create Categories</h1>
-    <button class="btn btn-warning">Add Category</button>
+    <button
+      ngIF="showTable"
+      class="btn btn-warning"
+      (click)="onCategoryDetailsAddClick($event)"
+    >
+      Add Category
+    </button>
   </div>
 </div>
-<div class="row mx-0">
+<div class="row mx-0" [hidden]="!showTable">
   <div class="col-lg-10">
     <table class="table table-hover table-primary">
       <thead>
@@ -48,7 +54,7 @@
   </div>
 </div>
 
-<div class="row mt-5">
+<div class="row mt-5" [hidden]="showTable">
   <div class="col-lg-5">
     <h1 class="text-info">Add category</h1>
     <app-admin-categories-form />

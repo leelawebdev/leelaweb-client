@@ -8,5 +8,8 @@ import { AdminTopicsFormComponent } from '../admin-topics-form/admin-topics-form
   styleUrl: './admin-topics.component.scss'
 })
 export class AdminTopicsComponent {
-
+  showTable = true;
+  onTopicsDetailsAddClick($event: Event){
+    this.showTable = !this.showTable;
+  }
 }

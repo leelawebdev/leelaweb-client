@@ -8,5 +8,8 @@ import { AdminChaptersFormComponent } from '../admin-chapters-form/admin-chapter
   styleUrl: './admin-chapters.component.scss'
 })
 export class AdminChaptersComponent {
-
+  showTable = true;
+  onChaptersDetailsAddClick(event: Event){
+    this.showTable = !this.showTable;
+  }
 }
