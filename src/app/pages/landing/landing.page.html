@@ -1,0 +1,117 @@
+<section
+  class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-10"
+>
+  <div class="flex-1">
+    <h1
+      class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight"
+    >
+      Master Modern Web Development
+      <span class="block text-indigo-600">with LeelaWebDev</span>
+    </h1>
+    <p class="text-lg text-gray-600 mb-8">
+      High-quality screencasts and courses to level up your coding skills. Learn
+      from real-world projects, just like Laracasts and Adocasts.
+    </p>
+    <button
+      class="bg-indigo-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow hover:bg-indigo-700 transition"
+    >
+      Get Started
+    </button>
+  </div>
+  <div class="flex-1 flex justify-center">
+    <img
+      src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80"
+      alt="Hero"
+      class="rounded-xl shadow-lg w-full max-w-md"
+    />
+  </div>
+</section>
+
+<!-- Featured Topics Section -->
+<section class="container mx-auto px-6 mt-12">
+  <h2 class="text-2xl font-bold text-gray-900 mb-6">Featured Topics</h2>
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+  >
+    <div
+      class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-100 dark:border-gray-800 p-6 flex flex-col items-center transform hover:-translate-y-1 hover:scale-105"
+    >
+      <img
+        src="https://angular.io/assets/images/logos/angular/angular.png"
+        alt="Angular"
+        class="h-16 mb-4 drop-shadow-lg"
+      />
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">
+        Angular
+      </h3>
+      <p class="text-gray-600 dark:text-gray-300 flex-1 mb-4 text-center">
+        Build scalable web apps with Angular.
+      </p>
+      <a
+        [routerLink]="['/topics', 'angular']"
+        class="text-indigo-600 font-medium hover:underline mt-auto"
+        >View Series</a
+      >
+    </div>
+    <div
+      class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-100 dark:border-gray-800 p-6 flex flex-col items-center transform hover:-translate-y-1 hover:scale-105"
+    >
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+        alt="React"
+        class="h-16 mb-4 drop-shadow-lg"
+      />
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">
+        React
+      </h3>
+      <p class="text-gray-600 dark:text-gray-300 flex-1 mb-4 text-center">
+        Build UIs with React.
+      </p>
+      <a
+        [routerLink]="['/topics', 'react']"
+        class="text-indigo-600 font-medium hover:underline mt-auto"
+        >View Series</a
+      >
+    </div>
+    <div
+      class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-100 dark:border-gray-800 p-6 flex flex-col items-center transform hover:-translate-y-1 hover:scale-105"
+    >
+      <img
+        src="https://nodejs.org/static/images/logo.svg"
+        alt="Node.js"
+        class="h-16 mb-4 drop-shadow-lg"
+      />
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">
+        Node.js
+      </h3>
+      <p class="text-gray-600 dark:text-gray-300 flex-1 mb-4 text-center">
+        Server-side JavaScript with Node.js.
+      </p>
+      <a
+        [routerLink]="['/topics', 'nodejs']"
+        class="text-indigo-600 font-medium hover:underline mt-auto"
+        >View Series</a
+      >
+    </div>
+    <div
+      class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-100 dark:border-gray-800 p-6 flex flex-col items-center transform hover:-translate-y-1 hover:scale-105"
+    >
+      <img
+        src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png"
+        alt="Docker"
+        class="h-16 mb-4 drop-shadow-lg"
+      />
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">
+        Docker
+      </h3>
+      <p class="text-gray-600 dark:text-gray-300 flex-1 mb-4 text-center">
+        Containerize your applications with Docker.
+      </p>
+      <a
+        [routerLink]="['/topics', 'docker']"
+        class="text-indigo-600 font-medium hover:underline mt-auto"
+        >View Series</a
+      >
+    </div>
+  </div>
+</section>

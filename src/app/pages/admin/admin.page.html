@@ -1,0 +1,115 @@
+<section class="container mx-auto px-6 py-16">
+  <div class="flex flex-col md:flex-row gap-8">
+    <!-- Admin Sidebar Navigation -->
+    <aside class="w-full md:w-64 bg-indigo-50 dark:bg-indigo-900 rounded-xl shadow p-6 mb-8 md:mb-0">
+      <nav class="flex flex-col gap-3">
+        <a
+          [routerLink]="['/admin/users']"
+          class="px-4 py-2 rounded text-indigo-700 dark:text-indigo-200 hover:bg-indigo-100 dark:hover:bg-indigo-800 font-medium transition"
+          >Users</a
+        >
+        <a
+          [routerLink]="['/admin/topics']"
+          class="px-4 py-2 rounded text-indigo-700 dark:text-indigo-200 hover:bg-indigo-100 dark:hover:bg-indigo-800 font-medium transition"
+          >Topics</a
+        >
+        <a
+          [routerLink]="['/admin/series']"
+          class="px-4 py-2 rounded text-indigo-700 dark:text-indigo-200 hover:bg-indigo-100 dark:hover:bg-indigo-800 font-medium transition"
+          >Series</a
+        >
+        <a
+          [routerLink]="['/admin/chapters']"
+          class="px-4 py-2 rounded text-indigo-700 dark:text-indigo-200 hover:bg-indigo-100 dark:hover:bg-indigo-800 font-medium transition"
+          >Chapters</a
+        >
+      </nav>
+    </aside>
+    <!-- Main Admin Content -->
+    <div class="flex-1">
+      <div
+        class="bg-white dark:bg-gray-900 rounded-xl shadow p-8 w-full max-w-4xl mx-auto"
+      >
+        <h1
+          class="text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center"
+        >
+          Admin Dashboard
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <div
+            class="bg-indigo-50 dark:bg-indigo-900 rounded-lg p-6 flex flex-col items-center"
+          >
+            <span class="text-4xl mb-2">📚</span>
+            <h2 class="text-lg font-semibold mb-1">Total Topics</h2>
+            <p class="text-2xl font-bold text-indigo-700 dark:text-indigo-300">
+              12
+            </p>
+          </div>
+          <div
+            class="bg-indigo-50 dark:bg-indigo-900 rounded-lg p-6 flex flex-col items-center"
+          >
+            <span class="text-4xl mb-2">🎬</span>
+            <h2 class="text-lg font-semibold mb-1">Total Series</h2>
+            <p class="text-2xl font-bold text-indigo-700 dark:text-indigo-300"
+              >8</p
+            >
+          </div>
+          <div
+            class="bg-indigo-50 dark:bg-indigo-900 rounded-lg p-6 flex flex-col items-center"
+          >
+            <span class="text-4xl mb-2">📖</span>
+            <h2 class="text-lg font-semibold mb-1">Total Chapters</h2>
+            <p class="text-2xl font-bold text-indigo-700 dark:text-indigo-300">
+              54
+            </p>
+          </div>
+          <div
+            class="bg-indigo-50 dark:bg-indigo-900 rounded-lg p-6 flex flex-col items-center"
+          >
+            <span class="text-4xl mb-2">🟢</span>
+            <h2 class="text-lg font-semibold mb-1">Active Users</h2>
+            <p class="text-2xl font-bold text-indigo-700 dark:text-indigo-300">
+              27
+            </p>
+          </div>
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 text-center mb-8">
+          Welcome, Superadmin! Here you can manage users, topics, series, and
+          more.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div
+            class="bg-indigo-50 dark:bg-indigo-900 rounded-lg p-6 flex flex-col items-center"
+          >
+            <span class="text-4xl mb-2">👤</span>
+            <h2 class="text-lg font-semibold mb-1">Users</h2>
+            <p class="text-gray-600 dark:text-gray-300 text-center text-sm mb-2">
+              Manage platform users and permissions.
+            </p>
+            <a
+              [routerLink]="['/admin/users']"
+              class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition inline-block text-center"
+            >
+              Manage Users
+            </a>
+          </div>
+          <div
+            class="bg-indigo-50 dark:bg-indigo-900 rounded-lg p-6 flex flex-col items-center"
+          >
+            <span class="text-4xl mb-2">📚</span>
+            <h2 class="text-lg font-semibold mb-1">Topics & Series</h2>
+            <p class="text-gray-600 dark:text-gray-300 text-center text-sm mb-2">
+              Add, edit, or remove topics and series.
+            </p>
+            <a
+              [routerLink]="['/admin/topics']"
+              class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition inline-block text-center"
+            >
+              Manage Content
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,148 @@
+<section class="container mx-auto px-6 py-16">
+  <h1 class="text-4xl font-bold text-gray-900 mb-10">Topics</h1>
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+  >
+    <!-- Example topic cards, replace with *ngFor when data is ready -->
+    <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+      <img
+        src="https://angular.io/assets/images/logos/angular/angular.png"
+        alt="Angular"
+        class="h-16 mb-4"
+      />
+      <h2 class="text-xl font-semibold mb-2">Angular</h2>
+      <p class="text-gray-600 mb-4 text-center">
+        Build scalable web apps with Angular.
+      </p>
+      <a
+        [routerLink]="['/topics', 'angular']"
+        class="text-indigo-600 font-medium hover:underline"
+        >View Series</a
+      >
+    </div>
+    <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+        alt="React"
+        class="h-16 mb-4"
+      />
+      <h2 class="text-xl font-semibold mb-2">React</h2>
+      <p class="text-gray-600 mb-4 text-center">Build UIs with React.</p>
+      <a
+        [routerLink]="['/topics', 'react']"
+        class="text-indigo-600 font-medium hover:underline"
+        >View Series</a
+      >
+    </div>
+    <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+      <img
+        src="https://nodejs.org/static/images/logo.svg"
+        alt="Node.js"
+        class="h-16 mb-4"
+      />
+      <h2 class="text-xl font-semibold mb-2">Node.js</h2>
+      <p class="text-gray-600 mb-4 text-center">
+        Server-side JavaScript with Node.js.
+      </p>
+      <a
+        [routerLink]="['/topics', 'nodejs']"
+        class="text-indigo-600 font-medium hover:underline"
+        >View Series</a
+      >
+    </div>
+    <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+      <img
+        src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png"
+        alt="Docker"
+        class="h-16 mb-4"
+      />
+      <h2 class="text-xl font-semibold mb-2">Docker</h2>
+      <p class="text-gray-600 mb-4 text-center">
+        Containerize your applications with Docker.
+      </p>
+      <a
+        [routerLink]="['/topics', 'docker']"
+        class="text-indigo-600 font-medium hover:underline"
+        >View Series</a
+      >
+    </div>
+    <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg"
+        alt="Vue"
+        class="h-16 mb-4"
+      />
+      <h2 class="text-xl font-semibold mb-2">Vue</h2>
+      <p class="text-gray-600 mb-4 text-center">
+        Progressive JavaScript framework for building UIs.
+      </p>
+      <a
+        [routerLink]="['/topics', 'vue']"
+        class="text-indigo-600 font-medium hover:underline"
+        >View Series</a
+      >
+    </div>
+    <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+        alt="HTML"
+        class="h-16 mb-4"
+      />
+      <h2 class="text-xl font-semibold mb-2">HTML</h2>
+      <p class="text-gray-600 mb-4 text-center">
+        The standard markup language for web pages.
+      </p>
+      <a
+        [routerLink]="['/topics', 'html']"
+        class="text-indigo-600 font-medium hover:underline"
+        >View Series</a
+      >
+    </div>
+    <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+        alt="CSS"
+        class="h-16 mb-4"
+      />
+      <h2 class="text-xl font-semibold mb-2">CSS</h2>
+      <p class="text-gray-600 mb-4 text-center">
+        Style your web pages with CSS.
+      </p>
+      <a
+        [routerLink]="['/topics', 'css']"
+        class="text-indigo-600 font-medium hover:underline"
+        >View Series</a
+      >
+    </div>
+    <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg"
+        alt="PHP"
+        class="h-16 mb-4"
+      />
+      <h2 class="text-xl font-semibold mb-2">PHP</h2>
+      <p class="text-gray-600 mb-4 text-center">
+        Server-side scripting with PHP.
+      </p>
+      <a
+        [routerLink]="['/topics', 'php']"
+        class="text-indigo-600 font-medium hover:underline"
+        >View Series</a
+      >
+    </div>
+    <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+      <img
+        src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+        alt="Git"
+        class="h-16 mb-4"
+      />
+      <h2 class="text-xl font-semibold mb-2">Git</h2>
+      <p class="text-gray-600 mb-4 text-center">Version control with Git.</p>
+      <a
+        [routerLink]="['/topics', 'git']"
+        class="text-indigo-600 font-medium hover:underline"
+        >View Series</a
+      >
+    </div>
+  </div>
+</section>

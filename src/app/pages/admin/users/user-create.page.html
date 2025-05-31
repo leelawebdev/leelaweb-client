@@ -1,0 +1,91 @@
+<div
+  class="max-w-2xl mx-auto bg-white dark:bg-gray-900 rounded-lg shadow p-8 mt-8"
+>
+  <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
+    Create User
+  </h2>
+  <form (ngSubmit)="createUser()" #userForm="ngForm">
+    <div class="mb-4">
+      <label class="block font-semibold mb-1">Username</label>
+      <input
+        [(ngModel)]="user.username"
+        name="username"
+        class="w-full px-3 py-2 rounded border dark:bg-gray-800 dark:text-white"
+        required
+      />
+    </div>
+    <div class="mb-4">
+      <label class="block font-semibold mb-1">Name</label>
+      <input
+        [(ngModel)]="user.name"
+        name="name"
+        class="w-full px-3 py-2 rounded border dark:bg-gray-800 dark:text-white"
+        required
+      />
+    </div>
+    <div class="mb-4">
+      <label class="block font-semibold mb-1">Email</label>
+      <input
+        [(ngModel)]="user.email"
+        name="email"
+        type="email"
+        class="w-full px-3 py-2 rounded border dark:bg-gray-800 dark:text-white"
+        required
+      />
+    </div>
+    <div class="mb-4">
+      <label class="block font-semibold mb-1">Phone</label>
+      <input
+        [(ngModel)]="user.phone"
+        name="phone"
+        class="w-full px-3 py-2 rounded border dark:bg-gray-800 dark:text-white"
+      />
+    </div>
+    <div class="mb-4">
+      <label class="block font-semibold mb-1">Role</label>
+      <select
+        [(ngModel)]="user.role"
+        name="role"
+        class="w-full px-3 py-2 rounded border dark:bg-gray-800 dark:text-white"
+      >
+        <option value="user">User</option>
+        <option value="superadmin">Superadmin</option>
+      </select>
+    </div>
+    <div class="mb-4">
+      <label class="block font-semibold mb-1">Password</label>
+      <input
+        [(ngModel)]="user.password"
+        name="password"
+        type="password"
+        class="w-full px-3 py-2 rounded border dark:bg-gray-800 dark:text-white"
+        required
+      />
+    </div>
+    <div class="mb-4">
+      <label class="block font-semibold mb-1">Confirm Password</label>
+      <input
+        [(ngModel)]="user.confirmPassword"
+        name="confirmPassword"
+        type="password"
+        class="w-full px-3 py-2 rounded border dark:bg-gray-800 dark:text-white"
+        required
+      />
+    </div>
+    <div class="flex gap-4 mt-8">
+      <button
+        type="button"
+        (click)="cancel()"
+        class="px-4 py-2 rounded bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600"
+      >
+        Cancel
+      </button>
+      <button
+        type="submit"
+        class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700"
+      >
+        Create
+      </button>
+    </div>
+  </form>
+</div>
