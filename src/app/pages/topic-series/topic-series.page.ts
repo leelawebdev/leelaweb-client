@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { NgIf, NgFor, TitleCasePipe } from '@angular/common';
+import { NgFor, TitleCasePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-topic-series-page',
   standalone: true,
-  imports: [NgIf, NgFor, TitleCasePipe, RouterLink],
+  imports: [NgFor, TitleCasePipe, RouterLink],
   templateUrl: './topic-series.page.html',
   styleUrls: ['./topic-series.page.scss'],
 })

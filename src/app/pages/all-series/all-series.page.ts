@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { NgIf, NgFor } from '@angular/common';
+import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-all-series-page',
   standalone: true,
-  imports: [NgIf, NgFor, RouterLink],
+  imports: [NgFor, RouterLink],
   templateUrl: './all-series.page.html',
   styleUrls: ['./all-series.page.scss'],
 })
