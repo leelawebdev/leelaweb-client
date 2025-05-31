@@ -7,7 +7,7 @@ import { AdminSidebarComponent } from './admin-sidebar.component';
 @Component({
   selector: 'app-topic-create',
   standalone: true,
-  imports: [RouterModule, CommonModule, FormsModule],
+  imports: [RouterModule, CommonModule, FormsModule, AdminSidebarComponent],
   templateUrl: './topic-create.page.html',
   styleUrls: ['./topic-create.page.scss'],
 })
@@ -15,7 +15,7 @@ export class TopicCreatePage {
   topic = {
     name: '',
     slug: '',
-    description: ''
+    description: '',
   };
 
   constructor(private readonly router: Router) {}
