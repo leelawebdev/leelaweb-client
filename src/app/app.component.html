@@ -11,3 +11,22 @@
 <div class="app-content">
   <router-outlet />
 </div>
+
+<footer class="w-full bg-gray-900 text-gray-200 py-8 mt-16">
+  <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-2">
+      <img src="/favicon.ico" alt="LeelaCasts Logo" class="h-8 w-8 rounded" />
+      <span class="font-bold text-lg">LeelaCasts</span>
+    </div>
+    <nav class="flex gap-6 text-sm">
+      <a href="#" class="hover:text-indigo-400 transition">Home</a>
+      <a href="#" class="hover:text-indigo-400 transition">Topics</a>
+      <a href="#" class="hover:text-indigo-400 transition">Courses</a>
+      <a href="#" class="hover:text-indigo-400 transition">About</a>
+      <a href="#" class="hover:text-indigo-400 transition">Contact</a>
+    </nav>
+    <div class="text-xs text-gray-400 text-center md:text-right">
+      &copy; {{ currentYear }} LeelaCasts. All rights reserved.
+    </div>
+  </div>
+</footer>
