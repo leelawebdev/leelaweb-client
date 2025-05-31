@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "leelawebdev_newclient": {
+    "leelaweb-client": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/leelawebdev_newclient",
+            "outputPath": "dist/leelaweb-client",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "leelawebdev_newclient:build:production"
+              "buildTarget": "leelaweb-client:build:production"
             },
             "development": {
-              "buildTarget": "leelawebdev_newclient:build:development"
+              "buildTarget": "leelaweb-client:build:development"
             }
           },
           "defaultConfiguration": "development"
