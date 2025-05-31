@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 })
 export class AppComponent {
   title = 'leelaweb-client';
+  currentYear = new Date().getFullYear();
 
   constructor() {
     if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
