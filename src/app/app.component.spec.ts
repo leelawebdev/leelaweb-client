@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'leelawebdev_newclient' title`, () => {
+  it(`should have the 'leelaweb-client' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('leelawebdev_newclient');
+    expect(app.title).toEqual('leelaweb-client');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, leelawebdev_newclient');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, leelaweb-client');
   });
 });
