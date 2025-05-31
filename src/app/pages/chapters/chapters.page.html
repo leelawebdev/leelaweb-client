@@ -1,0 +1,96 @@
+<section class="container mx-auto px-6 py-16">
+  <!-- Series Details at the Top -->
+  <div
+    class="bg-white dark:bg-gray-900 rounded-xl shadow p-8 flex flex-col md:flex-row items-center gap-8 mb-12"
+  >
+    <img
+      src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=200&q=80"
+      alt="Series Cover"
+      class="w-32 h-32 rounded-lg shadow-md object-cover mb-4 md:mb-0"
+    />
+    <div class="flex-1">
+      <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+        {{ seriesDetails.title }}
+      </h1>
+      <p class="text-gray-600 dark:text-gray-300 mb-2">
+        {{ seriesDetails.description }}
+      </p>
+      <div class="flex items-center gap-3 mt-2">
+        <img
+          src="https://randomuser.me/api/portraits/men/32.jpg"
+          alt="Author"
+          class="w-10 h-10 rounded-full border-2 border-indigo-500"
+        />
+        <span class="text-indigo-700 dark:text-indigo-300 font-medium">
+          By {{ seriesDetails.author }}
+        </span>
+      </div>
+    </div>
+    <div class="hidden md:block text-center">
+      <span
+        class="inline-block bg-indigo-100 dark:bg-indigo-800 text-indigo-700 dark:text-indigo-200 px-4 py-2 rounded-full font-semibold text-lg"
+      >
+        {{ chapters.length }} Chapters
+      </span>
+    </div>
+  </div>
+
+  <div
+    *ngIf="chapters.length; else noSeries"
+    class="flex flex-col md:flex-row gap-8"
+  >
+    <!-- Sidebar Navigation List -->
+    <aside class="w-full md:w-1/4 mb-8 md:mb-0">
+      <nav>
+        <ul class="space-y-2">
+          <li *ngFor="let chapter of chapters; let i = index">
+            <a
+              [routerLink]="['/chapters', chapter.slug]"
+              class="block w-full text-left px-4 py-2 rounded transition font-medium hover:bg-indigo-100 dark:hover:bg-indigo-800"
+              [ngClass]="{'bg-indigo-50 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300': i === selectedChapterIndex}"
+              (click)="selectChapter(i)"
+            >
+              {{ chapter.title }}
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Chapter Content -->
+    <div class="flex-1">
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+        <div class="w-full px-4 md:px-12 mb-4">
+          <div class="mb-4">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+              {{ selectedChapter.title }}
+            </h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-1">
+              {{ selectedChapter.description }}
+            </p>
+            <span
+              class="inline-block bg-indigo-100 dark:bg-indigo-800 text-indigo-700 dark:text-indigo-200 px-3 py-1 rounded-full text-sm font-medium"
+            >
+              {{ selectedChapter.duration }}
+            </span>
+          </div>
+          <iframe
+            width="100%"
+            height="400"
+            [src]="selectedChapter.video | safeUrl"
+            title="YouTube video"
+            frameborder="0"
+            allowfullscreen
+            class="rounded"
+          ></iframe>
+        </div>
+        <p class="text-gray-600 mb-4 text-center">
+          {{ selectedChapter.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <ng-template #noSeries>
+    <p class="text-red-600">No chapters found.</p>
+  </ng-template>
+</section>

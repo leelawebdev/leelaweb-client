@@ -1,0 +1,36 @@
+<div
+  class="max-w-2xl mx-auto bg-white dark:bg-gray-900 rounded-lg shadow p-8 mt-8"
+>
+  <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
+    User Details
+  </h2>
+  <div class="mb-4">
+    <span class="font-semibold">Username:</span> {{ user.username }}
+  </div>
+  <div class="mb-4">
+    <span class="font-semibold">Name:</span> {{ user.name }}
+  </div>
+  <div class="mb-4">
+    <span class="font-semibold">Email:</span> {{ user.email }}
+  </div>
+  <div class="mb-4">
+    <span class="font-semibold">Phone:</span> {{ user.phone }}
+  </div>
+  <div class="mb-4">
+    <span class="font-semibold">Role:</span> {{ user.role }}
+  </div>
+  <div class="flex gap-4 mt-8">
+    <button
+      (click)="goBack()"
+      class="px-4 py-2 rounded bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600"
+    >
+      Back
+    </button>
+    <button
+      (click)="editUser()"
+      class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700"
+    >
+      Edit
+    </button>
+  </div>
+</div>

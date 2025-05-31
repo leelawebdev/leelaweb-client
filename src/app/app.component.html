@@ -1,5 +1,13 @@
-<div class="container-fluid px-0">
-  <app-header></app-header>
-  <router-outlet></router-outlet>
-  <app-footer></app-footer>
+<app-header></app-header>
+
+<button
+  class="fixed bottom-4 right-4 z-50 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-full p-3 shadow-lg transition hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-500"
+  (click)="toggleDarkMode()"
+  aria-label="Toggle dark mode"
+>
+  🌓
+</button>
+
+<div class="app-content">
+  <router-outlet />
 </div>

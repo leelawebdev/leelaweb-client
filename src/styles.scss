@@ -1,26 +1,65 @@
-/* You can add global styles to this file, and also import other style files 081b28 0f2b3e 004b64 */
-@font-face {
-  font-family: leelWebFontRegular;
-  src: url(/public/fonts/Nunito-Regular.ttf);
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+/* Tailwind dark mode support */
+:root {
+  color-scheme: light dark;
 }
 
 body {
-  background-color: #081b28;
-  font-family: leelawebfontregular, sans-serif;
+  background-color: #f9fafb;
+  color: #111827;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  color: #9e9b9b;
+.dark body {
+  background-color: #18181b;
+  color: #f3f4f6;
 }
-.bg-card {
-  background-color: #023a4c !important;
+
+/* Header */
+header {
+  background-color: #fff;
+  color: #111827;
 }
-.text-info {
-  color: #236f88 !important;
+.dark header {
+  background-color: #23272f;
+  color: #f3f4f6;
 }
+
+/* Card backgrounds */
+.bg-white {
+  background-color: #fff;
+}
+.dark .bg-white {
+  background-color: #23272f;
+}
+
+/* Text colors */
+.text-gray-900 {
+  color: #111827;
+}
+.dark .text-gray-900 {
+  color: #f3f4f6;
+}
+.text-gray-700 {
+  color: #374151;
+}
+.dark .text-gray-700 {
+  color: #d1d5db;
+}
+.text-gray-600 {
+  color: #4b5563;
+}
+.dark .text-gray-600 {
+  color: #9ca3af;
+}
+
+/* Indigo button */
+.bg-indigo-600 {
+  background-color: #4f46e5;
+}
+.dark .bg-indigo-600 {
+  background-color: #6366f1;
+}
+
+/* Add more as needed for your color palette */
