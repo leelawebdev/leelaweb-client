@@ -1,8 +1,12 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { AdminSidebarComponent } from '../admin-sidebar.component';
 
 @Component({
   selector: 'app-user-view',
+  standalone: true,
+  imports: [RouterModule, CommonModule, AdminSidebarComponent],
   templateUrl: './user-view.page.html',
   styleUrls: ['./user-view.page.scss'],
 })
