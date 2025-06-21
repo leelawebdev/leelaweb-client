@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AdminSidebarComponent } from './admin-sidebar.component';
 
 @Component({
   selector: 'app-chapter-edit',
   standalone: true,
-  imports: [RouterModule, CommonModule, FormsModule],
+  imports: [RouterModule, CommonModule, FormsModule, AdminSidebarComponent],
   templateUrl: './chapter-edit.page.html',
   styleUrls: ['./chapter-edit.page.scss'],
 })

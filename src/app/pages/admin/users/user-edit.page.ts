@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AdminSidebarComponent } from '../admin-sidebar.component';
 
 @Component({
   selector: 'app-user-edit',
   standalone: true,
-  imports: [RouterModule, CommonModule, FormsModule],
+  imports: [RouterModule, CommonModule, FormsModule, AdminSidebarComponent],
   templateUrl: './user-edit.page.html',
   styleUrls: ['./user-edit.page.scss'],
 })

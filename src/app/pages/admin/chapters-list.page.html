@@ -1,21 +1,34 @@
-<div class="flex flex-col md:flex-row gap-8">
-  <app-admin-sidebar class="shrink-0"></app-admin-sidebar>
-  <div class="flex-1">
-    <section class="container mx-auto px-6 py-16">
-      <div
-        class="bg-white dark:bg-gray-900 rounded-xl shadow p-8 w-full max-w-4xl mx-auto"
-      >
-        <h1 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-          Manage Chapters
-        </h1>
-        <div class="flex justify-end mb-4">
-          <a
-            [routerLink]="['/admin/chapters/create']"
-            class="bg-indigo-600 text-white px-4 py-2 rounded font-semibold hover:bg-indigo-700 transition"
-            >+ Create Chapter</a
-          >
-        </div>
-        <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-800">
+<section class="min-h-screen bg-slate-50 dark:bg-slate-900">
+  <div class="flex min-h-screen">
+    <!-- Admin Sidebar Component -->
+    <app-admin-sidebar></app-admin-sidebar>
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-auto">
+      <div class="p-8">
+        <header class="mb-8">
+          <div class="flex justify-between items-center">
+            <div>
+              <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+                Manage Chapters
+              </h1>
+              <p class="text-gray-600 dark:text-gray-300">
+                Create and organize individual chapter content
+              </p>
+            </div>
+            <a
+              [routerLink]="['/admin/chapters/create']"
+              class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition flex items-center gap-2"
+            >
+              <span>+</span> Create Chapter
+            </a>
+          </div>
+        </header>
+
+        <!-- Chapters Table -->
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-800">
           <thead>
             <tr>
               <th
@@ -65,7 +78,9 @@
             </tr>
           </tbody>
         </table>
+          </div>
+        </div>
       </div>
-    </section>
+    </main>
   </div>
-</div>
+</section>

@@ -1,115 +1,180 @@
-<section class="container mx-auto px-6 py-16">
-  <div class="flex flex-col md:flex-row gap-8">
-    <!-- Admin Sidebar Navigation -->
-    <aside class="w-full md:w-64 bg-indigo-50 dark:bg-indigo-900 rounded-xl shadow p-6 mb-8 md:mb-0">
-      <nav class="flex flex-col gap-3">
-        <a
-          [routerLink]="['/admin/users']"
-          class="px-4 py-2 rounded text-indigo-700 dark:text-indigo-200 hover:bg-indigo-100 dark:hover:bg-indigo-800 font-medium transition"
-          >Users</a
-        >
-        <a
-          [routerLink]="['/admin/topics']"
-          class="px-4 py-2 rounded text-indigo-700 dark:text-indigo-200 hover:bg-indigo-100 dark:hover:bg-indigo-800 font-medium transition"
-          >Topics</a
-        >
-        <a
-          [routerLink]="['/admin/series']"
-          class="px-4 py-2 rounded text-indigo-700 dark:text-indigo-200 hover:bg-indigo-100 dark:hover:bg-indigo-800 font-medium transition"
-          >Series</a
-        >
-        <a
-          [routerLink]="['/admin/chapters']"
-          class="px-4 py-2 rounded text-indigo-700 dark:text-indigo-200 hover:bg-indigo-100 dark:hover:bg-indigo-800 font-medium transition"
-          >Chapters</a
-        >
-      </nav>
-    </aside>
-    <!-- Main Admin Content -->
-    <div class="flex-1">
-      <div
-        class="bg-white dark:bg-gray-900 rounded-xl shadow p-8 w-full max-w-4xl mx-auto"
-      >
-        <h1
-          class="text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center"
-        >
-          Admin Dashboard
-        </h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-          <div
-            class="bg-indigo-50 dark:bg-indigo-900 rounded-lg p-6 flex flex-col items-center"
-          >
-            <span class="text-4xl mb-2">📚</span>
-            <h2 class="text-lg font-semibold mb-1">Total Topics</h2>
-            <p class="text-2xl font-bold text-indigo-700 dark:text-indigo-300">
-              12
-            </p>
+<div class="min-h-screen bg-slate-50 dark:bg-slate-900">
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <app-admin-sidebar></app-admin-sidebar>
+    
+    <!-- Main Content -->
+    <div class="flex-1 p-8">
+      <!-- Top Header -->
+      <div class="mb-8">
+        <div class="flex items-center justify-between">
+          <div>
+            <h1 class="text-3xl font-bold text-gray-700 dark:text-white">Dashboard</h1>
+            <p class="text-slate-600 dark:text-slate-400 mt-1">Welcome back, Admin!</p>
           </div>
-          <div
-            class="bg-indigo-50 dark:bg-indigo-900 rounded-lg p-6 flex flex-col items-center"
-          >
-            <span class="text-4xl mb-2">🎬</span>
-            <h2 class="text-lg font-semibold mb-1">Total Series</h2>
-            <p class="text-2xl font-bold text-indigo-700 dark:text-indigo-300"
-              >8</p
-            >
-          </div>
-          <div
-            class="bg-indigo-50 dark:bg-indigo-900 rounded-lg p-6 flex flex-col items-center"
-          >
-            <span class="text-4xl mb-2">📖</span>
-            <h2 class="text-lg font-semibold mb-1">Total Chapters</h2>
-            <p class="text-2xl font-bold text-indigo-700 dark:text-indigo-300">
-              54
-            </p>
-          </div>
-          <div
-            class="bg-indigo-50 dark:bg-indigo-900 rounded-lg p-6 flex flex-col items-center"
-          >
-            <span class="text-4xl mb-2">🟢</span>
-            <h2 class="text-lg font-semibold mb-1">Active Users</h2>
-            <p class="text-2xl font-bold text-indigo-700 dark:text-indigo-300">
-              27
-            </p>
+          <div class="text-right">
+            <p class="text-sm text-slate-500">{{ currentDate | date:'EEEE, MMMM d, y' }}</p>
           </div>
         </div>
-        <p class="text-gray-600 dark:text-gray-300 text-center mb-8">
-          Welcome, Superadmin! Here you can manage users, topics, series, and
-          more.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div
-            class="bg-indigo-50 dark:bg-indigo-900 rounded-lg p-6 flex flex-col items-center"
-          >
-            <span class="text-4xl mb-2">👤</span>
-            <h2 class="text-lg font-semibold mb-1">Users</h2>
-            <p class="text-gray-600 dark:text-gray-300 text-center text-sm mb-2">
-              Manage platform users and permissions.
-            </p>
-            <a
-              [routerLink]="['/admin/users']"
-              class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition inline-block text-center"
-            >
-              Manage Users
-            </a>
+      </div>
+
+      <!-- Stats Overview -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <!-- Total Categories -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-700">
+          <div class="flex items-center">
+            <div class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
+              <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+              </svg>
+            </div>
+            <div class="ml-4">
+              <p class="text-2xl font-bold text-gray-700 dark:text-white">{{ stats.totalCategories }}</p>
+              <p class="text-sm text-slate-600 dark:text-slate-400">Categories</p>
+            </div>
           </div>
-          <div
-            class="bg-indigo-50 dark:bg-indigo-900 rounded-lg p-6 flex flex-col items-center"
-          >
-            <span class="text-4xl mb-2">📚</span>
-            <h2 class="text-lg font-semibold mb-1">Topics & Series</h2>
-            <p class="text-gray-600 dark:text-gray-300 text-center text-sm mb-2">
-              Add, edit, or remove topics and series.
-            </p>
-            <a
-              [routerLink]="['/admin/topics']"
-              class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition inline-block text-center"
-            >
-              Manage Content
-            </a>
+        </div>
+
+        <!-- Total Topics -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-700">
+          <div class="flex items-center">
+            <div class="p-3 bg-green-50 dark:bg-green-900/20 rounded-xl">
+              <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C20.832 18.477 19.247 18 17.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <div class="ml-4">
+              <p class="text-2xl font-bold text-gray-700 dark:text-white">{{ stats.totalTopics }}</p>
+              <p class="text-sm text-slate-600 dark:text-slate-400">Topics</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Total Series -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-700">
+          <div class="flex items-center">
+            <div class="p-3 bg-purple-50 dark:bg-purple-900/20 rounded-xl">
+              <svg class="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2M7 4h10M7 4H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2h-2M7 4v12M17 4v12"></path>
+              </svg>
+            </div>
+            <div class="ml-4">
+              <p class="text-2xl font-bold text-gray-700 dark:text-white">{{ stats.totalSeries }}</p>
+              <p class="text-sm text-slate-600 dark:text-slate-400">Series</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Total Chapters -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-700">
+          <div class="flex items-center">
+            <div class="p-3 bg-orange-50 dark:bg-orange-900/20 rounded-xl">
+              <svg class="w-6 h-6 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+            </div>
+            <div class="ml-4">
+              <p class="text-2xl font-bold text-gray-700 dark:text-white">{{ stats.totalChapters }}</p>
+              <p class="text-sm text-slate-600 dark:text-slate-400">Chapters</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content Grid -->
+      <div>
+        <!-- Quick Actions -->
+        <div>
+          <h2 class="text-xl font-semibold text-gray-700 dark:text-white mb-6">Quick Actions</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Manage Users -->
+            <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-md transition-shadow">
+              <div class="flex items-start">
+                <div class="p-3 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl">
+                  <svg class="w-6 h-6 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                  </svg>
+                </div>
+                <div class="ml-4 flex-1">
+                  <h3 class="text-lg font-semibold text-gray-700 dark:text-white">Manage Users</h3>
+                  <p class="text-slate-600 dark:text-slate-400 text-sm mt-1 mb-4">Add, edit, and manage user accounts</p>
+                  <a [routerLink]="['/admin/users']" class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors">
+                    View Users
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Manage Content -->
+            <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-md transition-shadow">
+              <div class="flex items-start">
+                <div class="p-3 bg-green-50 dark:bg-green-900/20 rounded-xl">
+                  <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
+                  </svg>
+                </div>
+                <div class="ml-4 flex-1">
+                  <h3 class="text-lg font-semibold text-gray-700 dark:text-white">Manage Topics</h3>
+                  <p class="text-slate-600 dark:text-slate-400 text-sm mt-1 mb-4">Create and organize topics</p>
+                  <a [routerLink]="['/admin/topics']" class="inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors">
+                    View Topics
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Manage Series -->
+            <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-md transition-shadow">
+              <div class="flex items-start">
+                <div class="p-3 bg-purple-50 dark:bg-purple-900/20 rounded-xl">
+                  <svg class="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                  </svg>
+                </div>
+                <div class="ml-4 flex-1">
+                  <h3 class="text-lg font-semibold text-gray-700 dark:text-white">Manage Series</h3>
+                  <p class="text-slate-600 dark:text-slate-400 text-sm mt-1 mb-4">Create learning series and courses</p>
+                  <a [routerLink]="['/admin/series']" class="inline-flex items-center px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg hover:bg-purple-700 transition-colors">
+                    View Series
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Manage Chapters -->
+            <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-md transition-shadow">
+              <div class="flex items-start">
+                <div class="p-3 bg-orange-50 dark:bg-orange-900/20 rounded-xl">
+                  <svg class="w-6 h-6 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                  </svg>
+                </div>
+                <div class="ml-4 flex-1">
+                  <h3 class="text-lg font-semibold text-gray-700 dark:text-white">Manage Chapters</h3>
+                  <p class="text-slate-600 dark:text-slate-400 text-sm mt-1 mb-4">Create and edit chapter content</p>
+                  <a [routerLink]="['/admin/chapters']" class="inline-flex items-center px-4 py-2 bg-orange-600 text-white text-sm font-medium rounded-lg hover:bg-orange-700 transition-colors">
+                    View Chapters
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>
