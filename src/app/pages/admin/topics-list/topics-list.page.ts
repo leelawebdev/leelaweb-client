@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { AdminSidebarComponent } from './admin-sidebar.component';
+import { AdminSidebarComponent } from '../../../components/admin-sidebar/admin-sidebar.component';
 
 interface Topic {
   name: string;
@@ -18,15 +18,27 @@ interface Topic {
 })
 export class TopicsListPage {
   topics: Topic[] = [
-    { name: 'Angular', slug: 'angular', description: 'Build scalable web apps with Angular.' },
+    {
+      name: 'Angular',
+      slug: 'angular',
+      description: 'Build scalable web apps with Angular.',
+    },
     { name: 'React', slug: 'react', description: 'Build UIs with React.' },
-    { name: 'Node.js', slug: 'nodejs', description: 'Server-side JavaScript with Node.js.' },
-    { name: 'Docker', slug: 'docker', description: 'Containerize your applications with Docker.' },
+    {
+      name: 'Node.js',
+      slug: 'nodejs',
+      description: 'Server-side JavaScript with Node.js.',
+    },
+    {
+      name: 'Docker',
+      slug: 'docker',
+      description: 'Containerize your applications with Docker.',
+    },
   ];
 
   constructor(private readonly router: Router) {}
 
   deleteTopic(slug: string) {
-    this.topics = this.topics.filter(topic => topic.slug !== slug);
+    this.topics = this.topics.filter((topic) => topic.slug !== slug);
   }
 }

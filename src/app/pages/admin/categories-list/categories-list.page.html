@@ -1,0 +1,106 @@
+<section class="min-h-screen bg-slate-50 dark:bg-slate-900">
+  <div class="flex min-h-screen">
+    <!-- Admin Sidebar Component -->
+    <app-admin-sidebar></app-admin-sidebar>
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-auto">
+      <div class="p-8">
+        <header class="mb-8">
+          <div class="flex justify-between items-center">
+            <div>
+              <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+                Manage Categories
+              </h1>
+              <p class="text-gray-600 dark:text-gray-300">
+                Create, edit, and organize your content categories
+              </p>
+            </div>
+            <a
+              [routerLink]="['/admin/categories/create']"
+              class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition flex items-center gap-2"
+            >
+              <span>+</span> Create Category
+            </a>
+          </div>
+        </header>
+
+        <!-- Categories Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+        >
+          <div
+            *ngFor="let category of categories"
+            class="bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-xl transition-shadow"
+          >
+            <!-- Category Image -->
+            <div
+              class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 relative overflow-hidden"
+            >
+              <img
+                *ngIf="category.imageUrl"
+                [src]="category.imageUrl"
+                [alt]="category.name"
+                class="w-full h-full object-cover"
+              />
+              <div
+                *ngIf="!category.imageUrl"
+                class="w-full h-full flex items-center justify-center text-white text-2xl font-bold"
+              >
+                {{ category.name.charAt(0).toUpperCase() }}
+              </div>
+            </div>
+
+            <!-- Category Content -->
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                {{ category.name }}
+              </h3>
+              <p
+                class="text-gray-600 dark:text-gray-400 text-sm mb-3 line-clamp-3"
+              >
+                {{ category.description }}
+              </p>
+              <div class="text-xs text-gray-500 dark:text-gray-500 mb-4">
+                Created: {{ category.createdAt | date: 'MMM d, yyyy' }}
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="flex gap-2">
+                <button
+                  (click)="editCategory(category.slug)"
+                  class="flex-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-200 dark:hover:bg-blue-800 transition"
+                >
+                  Edit
+                </button>
+                <button
+                  (click)="deleteCategory(category.id)"
+                  class="flex-1 bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 px-3 py-2 rounded-lg text-sm font-medium hover:bg-red-200 dark:hover:bg-red-800 transition"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Empty State -->
+        <div *ngIf="categories.length === 0" class="text-center py-16">
+          <div class="text-gray-400 dark:text-gray-500 text-6xl mb-4">📁</div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            No categories found
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-6">
+            Get started by creating your first category
+          </p>
+          <a
+            [routerLink]="['/admin/categories/create']"
+            class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition"
+          >
+            <span>+</span> Create Category
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>

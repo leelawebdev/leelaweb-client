@@ -48,7 +48,9 @@ export const routes: Routes = [
   {
     path: 'admin',
     loadComponent: () =>
-      import('./pages/admin/admin.page').then((m) => m.AdminPage),
+      import('./pages/admin/admin-dashboard/admin.page').then(
+        (m) => m.AdminPage
+      ),
     canActivate: [
       () => {
         if (typeof window === 'undefined') return false; // SSR guard
@@ -112,7 +114,9 @@ export const routes: Routes = [
   {
     path: 'admin/topics',
     loadComponent: () =>
-      import('./pages/admin/topics-list.page').then((m) => m.TopicsListPage),
+      import('./pages/admin/topics-list/topics-list.page').then(
+        (m) => m.TopicsListPage
+      ),
     canActivate: [
       () => {
         if (typeof window === 'undefined') return false; // SSR guard
@@ -124,7 +128,9 @@ export const routes: Routes = [
   {
     path: 'admin/topics/create',
     loadComponent: () =>
-      import('./pages/admin/topic-create.page').then((m) => m.TopicCreatePage),
+      import('./pages/admin/topic-create/topic-create.page').then(
+        (m) => m.TopicCreatePage
+      ),
     canActivate: [
       () => {
         if (typeof window === 'undefined') return false; // SSR guard
@@ -136,7 +142,9 @@ export const routes: Routes = [
   {
     path: 'admin/topics/:slug/edit',
     loadComponent: () =>
-      import('./pages/admin/topic-edit.page').then((m) => m.TopicEditPage),
+      import('./pages/admin/topic-edit/topic-edit.page').then(
+        (m) => m.TopicEditPage
+      ),
     canActivate: [
       () => {
         if (typeof window === 'undefined') return false; // SSR guard
@@ -148,7 +156,9 @@ export const routes: Routes = [
   {
     path: 'admin/series',
     loadComponent: () =>
-      import('./pages/admin/series-list.page').then((m) => m.SeriesListPage),
+      import('./pages/admin/series-list/series-list.page').then(
+        (m) => m.SeriesListPage
+      ),
     canActivate: [
       () => {
         if (typeof window === 'undefined') return false; // SSR guard
@@ -160,7 +170,9 @@ export const routes: Routes = [
   {
     path: 'admin/series/create',
     loadComponent: () =>
-      import('./pages/admin/series-create.page').then((m) => m.SeriesCreatePage),
+      import('./pages/admin/series-create/series-create.page').then(
+        (m) => m.SeriesCreatePage
+      ),
     canActivate: [
       () => {
         if (typeof window === 'undefined') return false; // SSR guard
@@ -172,7 +184,9 @@ export const routes: Routes = [
   {
     path: 'admin/series/:slug/edit',
     loadComponent: () =>
-      import('./pages/admin/series-edit.page').then((m) => m.SeriesEditPage),
+      import('./pages/admin/series-edit/series-edit.page').then(
+        (m) => m.SeriesEditPage
+      ),
     canActivate: [
       () => {
         if (typeof window === 'undefined') return false; // SSR guard
@@ -184,7 +198,9 @@ export const routes: Routes = [
   {
     path: 'admin/chapters',
     loadComponent: () =>
-      import('./pages/admin/chapters-list.page').then((m) => m.ChaptersListPage),
+      import('./pages/admin/chapters-list/chapters-list.page').then(
+        (m) => m.ChaptersListPage
+      ),
     canActivate: [
       () => {
         if (typeof window === 'undefined') return false; // SSR guard
@@ -196,7 +212,9 @@ export const routes: Routes = [
   {
     path: 'admin/chapters/create',
     loadComponent: () =>
-      import('./pages/admin/chapter-create.page').then((m) => m.ChapterCreatePage),
+      import('./pages/admin/chapter-create/chapter-create.page').then(
+        (m) => m.ChapterCreatePage
+      ),
     canActivate: [
       () => {
         if (typeof window === 'undefined') return false; // SSR guard
@@ -208,7 +226,51 @@ export const routes: Routes = [
   {
     path: 'admin/chapters/:slug/edit',
     loadComponent: () =>
-      import('./pages/admin/chapter-edit.page').then((m) => m.ChapterEditPage),
+      import('./pages/admin/chapter-edit/chapter-edit.page').then(
+        (m) => m.ChapterEditPage
+      ),
+    canActivate: [
+      () => {
+        if (typeof window === 'undefined') return false; // SSR guard
+        const user = window.localStorage?.getItem('userRole');
+        return user === 'superadmin';
+      },
+    ],
+  },
+  {
+    path: 'admin/categories',
+    loadComponent: () =>
+      import('./pages/admin/categories-list/categories-list.page').then(
+        (m) => m.CategoriesListPage
+      ),
+    canActivate: [
+      () => {
+        if (typeof window === 'undefined') return false; // SSR guard
+        const user = window.localStorage?.getItem('userRole');
+        return user === 'superadmin';
+      },
+    ],
+  },
+  {
+    path: 'admin/categories/create',
+    loadComponent: () =>
+      import('./pages/admin/category-create/category-create.page').then(
+        (m) => m.CategoryCreatePage
+      ),
+    canActivate: [
+      () => {
+        if (typeof window === 'undefined') return false; // SSR guard
+        const user = window.localStorage?.getItem('userRole');
+        return user === 'superadmin';
+      },
+    ],
+  },
+  {
+    path: 'admin/categories/:id/edit',
+    loadComponent: () =>
+      import('./pages/admin/category-edit/category-edit.page').then(
+        (m) => m.CategoryEditPage
+      ),
     canActivate: [
       () => {
         if (typeof window === 'undefined') return false; // SSR guard
