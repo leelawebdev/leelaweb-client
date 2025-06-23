@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { AdminSidebarComponent } from './admin-sidebar.component';
+import { AdminSidebarComponent } from '../../../components/admin-sidebar/admin-sidebar.component';
 
 @Component({
   selector: 'app-topic-edit',
@@ -15,21 +15,40 @@ export class TopicEditPage {
   topic = {
     name: '',
     slug: '',
-    description: ''
+    description: '',
   };
 
-  constructor(private readonly router: Router, private readonly route: ActivatedRoute) {
+  constructor(
+    private readonly router: Router,
+    private readonly route: ActivatedRoute
+  ) {
     // Mock: Load topic by slug from route param
     const slug = this.route.snapshot.paramMap.get('slug');
     // In real app, fetch topic from service
     if (slug === 'angular') {
-      this.topic = { name: 'Angular', slug: 'angular', description: 'Build scalable web apps with Angular.' };
+      this.topic = {
+        name: 'Angular',
+        slug: 'angular',
+        description: 'Build scalable web apps with Angular.',
+      };
     } else if (slug === 'react') {
-      this.topic = { name: 'React', slug: 'react', description: 'Build UIs with React.' };
+      this.topic = {
+        name: 'React',
+        slug: 'react',
+        description: 'Build UIs with React.',
+      };
     } else if (slug === 'nodejs') {
-      this.topic = { name: 'Node.js', slug: 'nodejs', description: 'Server-side JavaScript with Node.js.' };
+      this.topic = {
+        name: 'Node.js',
+        slug: 'nodejs',
+        description: 'Server-side JavaScript with Node.js.',
+      };
     } else if (slug === 'docker') {
-      this.topic = { name: 'Docker', slug: 'docker', description: 'Containerize your applications with Docker.' };
+      this.topic = {
+        name: 'Docker',
+        slug: 'docker',
+        description: 'Containerize your applications with Docker.',
+      };
     }
   }
 

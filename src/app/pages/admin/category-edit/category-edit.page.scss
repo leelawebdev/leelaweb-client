@@ -1,0 +1,15 @@
+/* Category Edit Page Styles */
+:host {
+  display: block;
+}
+
+.file-upload-area.dragover {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+.image-preview {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+}

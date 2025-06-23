@@ -1,2 +1,4 @@
-export * from './carousel/carousel.component';
-export * from './header/header.component';
+// Barrel file for all components
+export * from './admin-sidebar';
+export * from './carousel';
+export * from './header';
